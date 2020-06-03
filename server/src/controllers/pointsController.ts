@@ -46,12 +46,12 @@ class PointsController {
          *      JOIN point_itens ON itens.id = point_itens.pointe_id = {id}
          */
         const itens = await knex('itens')
-            .join('point_itens', 'itens.id', '=', 'point_itens.item_id')
-            .where('point_itens.item_id', id)
+            .join('point_itens', 'point_itens.item_id', '=', 'itens.id')
+            .where('point_itens.point_id', id)
             .select('itens.name');
 
 
-        return response.json({ point, itens });
+        return response.json({point, itens});
     }
 
 
