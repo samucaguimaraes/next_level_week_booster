@@ -1,0 +1,2 @@
+#Start do servidor e minimizar o terminal
+yarn start
