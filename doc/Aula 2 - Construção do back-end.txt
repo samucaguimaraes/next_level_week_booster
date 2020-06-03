@@ -1,0 +1,58 @@
+## Rotas e Recursos ##
+
+Rota: Endereço completo da requisição
+Recurso: Qual entidade estamos acessando do sistema
+
+GET: Buscar uma ou mais informações no back-end
+POST: Criar uma nova informação no back-end
+PUT: Atualizar uma informação existente no back-end
+DELETE: Remover uma informação do back-end
+
+POST 	http://localhos:3333/users = Criar usuario
+GET 	http://localhos:3333/users = Listar usuario
+GET 	http://localhos:3333/users = Buscar dados do usuario com id 5
+
+Request Param: Parêmetro que vem na pr´pria rota que identificam um recurso
+Query Param: Parâmetros opcionais na requisição, por exemplos filtros e paginação
+Request Body: Parâmetros para criação/atualização de informações
+
+## Configuração do Knex (Query Builder) ###
+
+#instalando o knex
+yarn add knex
+
+#INstalando o sqlite3
+yarn add sqlite3
+
+#Entidade Identificadas
+- points (pontos de coleta) {image, name, email, whatsapp, latitude, longitude, city, uf} 
+- itens (Itens para coleta){image, title}
+- point_itens (N-N), Chamdo de tabela pivot
+
+## Migrations = histórico do banco de dados
+
+#depois os migrations, configurar o arquivo knexfile.ts na raiz do projeto com o path de conexão e o path da pasta de migrations
+
+#Criando as tabelas com o migration
+npx knex  --knexfile knexfile.ts migrate:latest
+
+#Itens pre-estabelicidos na aplicação usando Seed CLI do Knex
+- Criando a pasta seeds para automatizar insertds no banco
+
+## Funcionalidades da aplicação ##
+- Cadastro de coletas
+- Lista de itens de coleta
+
+#Instalando o CORS - Define quais endereços externos terão acesso a api
+yarn add cors
+
+#Type para descrição do cors
+yarn add @types/cors -D
+
+
+
+
+
+
+
+

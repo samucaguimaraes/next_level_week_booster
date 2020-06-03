@@ -1,0 +1,38 @@
+## Estrutura básica do back-end com NodeJS usando o TypeScript ##
+
+#Inianco a aplicação server(nodeJS) na pasta server
+npm init -y
+
+#Add microframe para rotas express
+yarn add express 
+
+#Adicionado a dependencia de desenvolvimento para resolver problema de tipagem do express
+yarn add @types/express
+
+#Adicionando dependencia para TypeScript node
+yarn add ts-node -d
+
+#Add typescript
+yarn add typescript -D
+
+#Instalando o ts-node-dev para reiniciar o servidor apos algum save
+yarn add ts-node-dev -D
+
+#Criando o arquivo de configuração do typescript
+npx tsc --init
+
+#Iniciando o servidor nodeJS com TS
+npx ts-node src/server.ts
+
+## Estrutura básica do front-end com React com TypeScript ##
+
+# Vantagens de usar o react
+1- Organização do código (Componentização), facilitando o reuso do código
+2- Divisão de responsabilidades
+3- Uma API e multiplos clientes (Front-end e mobile por exemplo)
+
+#Criando a aplicação react 
+npx create-react-app web --template=typescript
+
+#Inciando o front-end react
+yarn start
