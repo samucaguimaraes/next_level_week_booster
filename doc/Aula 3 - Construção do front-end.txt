@@ -1,2 +1,7 @@
 #Start do servidor e minimizar o terminal
 yarn start
+
+#Limpeza da estrutura
+
+#JSX: Sintaxe de XML dentro do JavaScript
+#COMPONENTIZAÇÃO: É o conceito de replicar uma parte do código repetitivo
